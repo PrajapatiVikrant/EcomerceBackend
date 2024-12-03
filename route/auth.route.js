@@ -43,7 +43,7 @@ router.post('/signup', async (req, res) => {
       { expiresIn: '1h' },
       (err, token) => {
         if (err) throw err;
-        res.status(201).json({name, token });
+       return res.status(201).json({name, token });
       }
     );
 
@@ -84,7 +84,7 @@ router.post('/login', async (req, res) => {
         { expiresIn:'1h' },
         (err, token) => {
           if (err) throw err;
-          res.json({name:user.name, token });
+         return res.json({name:user.name, token });
         }
       );
   
