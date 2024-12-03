@@ -20,7 +20,7 @@ router.post('/signup', async (req, res) => {
 
   // Basic validation
   if (!email || !password) {
-    return res.status(400).json({ message: 'Please enter all fields' });
+    return res.json({ message: 'Please enter all fields' });
   }
 
   try {
@@ -43,7 +43,7 @@ router.post('/signup', async (req, res) => {
       { expiresIn: '1h' },
       (err, token) => {
         if (err) throw err;
-       return res.status(201).json({name, token });
+       return res.json({message:name, token });
       }
     );
 
@@ -59,20 +59,20 @@ router.post('/login', async (req, res) => {
   
     // Basic validation
     if (!email || !password) {
-      return res.status(400).json({ message: 'Please enter all fields' });
+      return res.json({ message: 'Please enter all fields' });
     }
   
     try {
       // Check for existing user
       const user = await userModel.findOne({ email });
       if (!user) {
-        return res.status(400).json({ message: 'Invalid Credentials' });
+        return res.json({ message: 'Not found' });
       }
   
       // Validate password
       const isMatch = await user.matchPassword(password);
       if (!isMatch) {
-        return res.status(400).json({ message: 'Invalid Credentials' });
+        return res.json({ message: 'Invalid Credentials' });
       }
   
       
@@ -84,7 +84,7 @@ router.post('/login', async (req, res) => {
         { expiresIn:'1h' },
         (err, token) => {
           if (err) throw err;
-         return res.json({name:user.name, token });
+         return res.json({message:user.name, token });
         }
       );
   
