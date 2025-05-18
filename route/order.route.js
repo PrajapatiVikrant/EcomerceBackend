@@ -5,8 +5,8 @@ const Razorpay = require('razorpay');
 const router = express.Router()
 
 
-const key_id = "rzp_test_j9y9J7mpIATZVk";
-const key_secret = "E0qcrngMstXWyv21bU4ANfW5";
+const key_id = "rzp_test_9Xl0nm4yttKDhb";
+const key_secret = "oSUB4teLKE9qo4qiVDqmwSV1";
 
 
 
