@@ -65,35 +65,35 @@ npm run dev
 ```
 ##API Endpoints
 
-1. Auth Routes
-| Method | Endpoint         | Description         | Protected |
-| ------ | ---------------- | ------------------- | --------- |
-| POST   | /api/auth/signup | Register a new user | ❌         |
-| POST   | /api/auth/login  | Login and get JWT   | ❌         |
-| GET    | /api/auth/       | Get user details    | ✅         |
+1. Auth Routes <br>
+| Method | Endpoint         | Description         | Protected | <br>
+| ------ | ---------------- | ------------------- | --------- | <br>
+| POST   | /api/auth/signup | Register a new user | ❌         | <br>
+| POST   | /api/auth/login  | Login and get JWT   | ❌         | <br>
+| GET    | /api/auth/       | Get user details    | ✅         | <br>
 
-2. Product Routes
-| Method | Endpoint                                        | Description                  | Protected |
-| ------ | ----------------------------------------------- | ---------------------------- | --------- |
-| GET    | /api/products/category                          | Get all product categories   | ❌         |
-| GET    | /api/products/:gender                           | Get products by gender       | ❌         |
-| GET    | /api/products/:gender/:watchCategory            | Get watches by category      | ❌         |
-| GET    | /api/products/:gender/:watchCategory/:name/:url | Get specific product details | ❌         |
+2. Product Routes <br>
+| Method | Endpoint                                        | Description                  | Protected | <br>
+| ------ | ----------------------------------------------- | ---------------------------- | --------- | <br>
+| GET    | /api/products/category                          | Get all product categories   | ❌         | <br>
+| GET    | /api/products/:gender                           | Get products by gender       | ❌         | <br>
+| GET    | /api/products/:gender/:watchCategory            | Get watches by category      | ❌         | <br>
+| GET    | /api/products/:gender/:watchCategory/:name/:url | Get specific product details | ❌         | <br>
 
-3. Cart Routes
-| Method | Endpoint      | Description              | Protected |
-| ------ | ------------- | ------------------------ | --------- |
-| GET    | /api/cart/    | Get user cart            | ✅         |
-| POST   | /api/cart/    | Add product to cart      | ✅         |
-| PUT    | /api/cart/:id | Update product quantity  | ✅         |
-| DELETE | /api/cart/:id | Remove product from cart | ✅         |
+3. Cart Routes<br>
+| Method | Endpoint      | Description              | Protected | <br>
+| ------ | ------------- | ------------------------ | --------- | <br>
+| GET    | /api/cart/    | Get user cart            | ✅         |<br>
+| POST   | /api/cart/    | Add product to cart      | ✅         |<br>
+| PUT    | /api/cart/:id | Update product quantity  | ✅         |<br>
+| DELETE | /api/cart/:id | Remove product from cart | ✅         |<br>
 
-4. Order Routes
-| Method | Endpoint          | Description             | Protected |
-| ------ | ----------------- | ----------------------- | --------- |
-| POST   | /api/order/       | Place a new order       | ✅         |
-| POST   | /api/order/order  | Create Razorpay order   | ❌         |
-| POST   | /api/order/verify | Verify Razorpay payment | ❌         |
+4. Order Routes<br>
+| Method | Endpoint          | Description             | Protected |<br>
+| ------ | ----------------- | ----------------------- | --------- |<br>
+| POST   | /api/order/       | Place a new order       | ✅         |<br>
+| POST   | /api/order/order  | Create Razorpay order   | ❌         |<br>
+| POST   | /api/order/verify | Verify Razorpay payment | ❌         |<br>
 
 
 
